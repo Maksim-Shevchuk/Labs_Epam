@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webPages>
+  <webPage id="1">
+    <title>VSU</title>
+    <webPageType>mirror</webPageType>
+    <needAuthorization>true</needAuthorization>
+    <chars>
+      <votingAvailable>true</votingAvailable>
+      <votingType>ANONYMOUS</votingType>
+      <paidInformation>false</paidInformation>
+      <emailAvailable>true</emailAvailable>
+      <archiveAvailable>false</archiveAvailable>
+    </chars>
+  </webPage>
+  <webPage id="2">
+    <title>Habr</title>
+    <webPageType>news</webPageType>
+    <needAuthorization>true</needAuthorization>
+    <chars>
+      <votingAvailable>true</votingAvailable>
+      <voitingType>OPEN_VOTE</voitingType>
+      <paidInformation>false</paidInformation>
+      <emailAvailable>true</emailAvailable>
+      <numberOfNews>15</numberOfNews>
+    </chars>
+  </webPage>
+  <webPage id="3">
+    <title>Yandex</title>
+    <webPageType>portal</webPageType>
+    <needAuthorization>false</needAuthorization>
+    <chars>
+      <votingAvailable>false</votingAvailable>
+      <voitingType>UNAPPROACHABLE</voitingType>
+      <paidInformation>false</paidInformation>
+      <emailAvailable>true</emailAvailable>
+      <archiveAvailable>true</archiveAvailable>
+    </chars>
+  </webPage>
+</webPages>
