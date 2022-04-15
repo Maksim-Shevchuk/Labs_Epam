@@ -1,6 +1,7 @@
-package com.epam.lab.task3.model;
+package com.epam.lab.task3.model.chars;
 
 public abstract class Chars {
+
     private String name;
     private String element;
 

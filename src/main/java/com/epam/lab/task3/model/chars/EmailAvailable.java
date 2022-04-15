@@ -1,6 +1,7 @@
-package com.epam.lab.task3.model;
+package com.epam.lab.task3.model.chars;
 
 public class EmailAvailable extends Chars{
+
     private Boolean isEmailAvailable;
 
     public EmailAvailable() {
@@ -17,4 +18,5 @@ public class EmailAvailable extends Chars{
         return String.valueOf(isEmailAvailable);
     }
 }
+
 

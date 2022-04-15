@@ -1,4 +1,4 @@
-package com.epam.lab.task3.model;
+package com.epam.lab.task3.model.chars;
 
 public class ArchiveAvailable extends Chars {
 

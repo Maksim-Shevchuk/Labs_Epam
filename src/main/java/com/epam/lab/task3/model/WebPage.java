@@ -1,5 +1,8 @@
 package com.epam.lab.task3.model;
 
+import com.epam.lab.task3.model.chars.Chars;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class WebPage {
@@ -8,7 +11,7 @@ public class WebPage {
     private String title;
     private WebPageType webPageType;
     private Boolean needAuthorization;
-    private List<Chars> chars;
+    private List<Chars> chars = new ArrayList<>();
 
     public String getIdentity() {
         return identity;
@@ -53,11 +56,11 @@ public class WebPage {
     @Override
     public String toString() {
         return "WebPage{" +
-            "identity='" + identity + '\'' +
-            ", title='" + title + '\'' +
-            ", webPageType=" + webPageType +
-            ", chars=" + chars +
-            ", needAuthorization=" + needAuthorization +
-            '}';
+                "identity='" + identity + '\'' +
+                ", title='" + title + '\'' +
+                ", webPageType=" + webPageType +
+                ", chars=" + chars +
+                ", needAuthorization=" + needAuthorization +
+                '}';
     }
 }
