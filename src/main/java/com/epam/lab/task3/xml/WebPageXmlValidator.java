@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class WebPageXmlValidator extends DefaultHandler {
-    public static final String SCHEMA_FILE_NAME = "src\\main\\java\\com\\epam\\lab\\task3\\webPages.xsd";
 
     private StringBuilder error = new StringBuilder();
 
@@ -62,7 +61,6 @@ public class WebPageXmlValidator extends DefaultHandler {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
             String path = Paths.get("src", "main", "java", "com", "epam", "lab", "task3", "webPages.xsd").toAbsolutePath().toString();
-            //Schema schema = factory.newSchema(new File(path));
             Schema schema = factory.newSchema(new File(Constants.SCHEME_PATH));
             Validator validator = schema.newValidator();
             validator.setErrorHandler(this);
