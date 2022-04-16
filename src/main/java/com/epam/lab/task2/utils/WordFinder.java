@@ -43,8 +43,9 @@ public class WordFinder {
     return findWordsByRegExp(text, "\\+\\d{3}\\(\\d{2}\\)\\d{3}\\-\\d{2}\\-\\d{2}");
   }
 
+  // emil is not a word
   public List<Word> findWords(String text){
-    return findWordsByRegExp(text, "['\\w]+");
+    return findWordsByRegExp(text, "(?<!@|@\\w{1,7}\\.)\\b[a-zA-z']+\\b(?!@)");
   }
 }
 
