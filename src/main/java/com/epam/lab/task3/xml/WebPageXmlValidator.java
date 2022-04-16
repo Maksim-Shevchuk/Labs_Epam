@@ -60,7 +60,6 @@ public class WebPageXmlValidator extends DefaultHandler {
     public boolean validate() throws IOException {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
-            String path = Paths.get("src", "main", "java", "com", "epam", "lab", "task3", "webPages.xsd").toAbsolutePath().toString();
             Schema schema = factory.newSchema(new File(Constants.SCHEME_PATH));
             Validator validator = schema.newValidator();
             validator.setErrorHandler(this);

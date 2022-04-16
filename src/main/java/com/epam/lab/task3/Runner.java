@@ -16,7 +16,6 @@ public class Runner {
 
     public static void main(String[] args) throws IOException, XMLStreamException {
         System.out.println(System.getProperty("user.dir"));
-        String path = Paths.get("src", "main", "java", "com", "epam", "lab", "task3", "webPages.xml").toAbsolutePath().toString();
         WebPageXmlValidator validator = new WebPageXmlValidator(Constants.XML_PATH);
         if (validator.validate()) {
             WebPageXmlReader reader = new WebPageXmlReader();
