@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.org/webPages" elementFormDefault="qualified">
+    <xs:element name="webPages">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="webPage" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string" maxOccurs="unbounded"/>
+                            <xs:element name="webPageType">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="PORTAL_WEB_PAGE"/>
+                                        <xs:enumeration value="MIRROR_WEB_PAGE"/>
+                                        <xs:enumeration value="NEWS_WEB_PAGE"/>
+                                        <xs:enumeration value="ADVERTISING_WEB_PAGE"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="needAuthorization" type="xs:boolean"/>
+                            <xs:element name="chars">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="votingAvailable" type="xs:boolean"/>
+                                        <xs:element name="votingType">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="OPEN_VOTE"/>
+                                                    <xs:enumeration value="ANONYMOUS"/>
+                                                    <xs:enumeration value="UNAPPROACHABLE"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="paidInformation" type="xs:boolean"/>
+                                        <xs:element name="emailAvailable" minOccurs="0" type="xs:boolean"/>
+                                        <xs:element name="archiveAvailable" minOccurs="0" type="xs:boolean"/>
+                                        <xs:element name="numberOfNews" minOccurs="0" type="xs:positiveInteger"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
