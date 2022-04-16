@@ -1,13 +1,14 @@
 package com.epam.lab.task3.xml;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.util.List;
+import com.epam.lab.task3.model.WebPage;
+import com.epam.lab.task3.model.chars.Chars;
+
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
-import com.epam.lab.task3.model.WebPage;
-import com.epam.lab.task3.model.chars.Chars;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.List;
 
 public class WebPageXmlWriter {
 

@@ -5,7 +5,7 @@ public class ArchiveAvailable extends Chars {
     private Boolean isArchiveAvailable;
 
     public ArchiveAvailable() {
-        super("is archive avilable for downloading");
+        super("is archive available for downloading");
     }
 
     @Override

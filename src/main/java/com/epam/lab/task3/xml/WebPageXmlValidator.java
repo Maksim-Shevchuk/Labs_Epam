@@ -1,5 +1,6 @@
 package com.epam.lab.task3.xml;
 
+import com.epam.lab.task3.Constants;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -11,6 +12,7 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 public class WebPageXmlValidator extends DefaultHandler {
     public static final String SCHEMA_FILE_NAME = "src\\main\\java\\com\\epam\\lab\\task3\\webPages.xsd";
@@ -59,8 +61,9 @@ public class WebPageXmlValidator extends DefaultHandler {
     public boolean validate() throws IOException {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
-            //Schema schema = factory.newSchema(new File("webPages.xsd"));
-            Schema schema = factory.newSchema(new StreamSource(getClass().getResourceAsStream(SCHEMA_FILE_NAME)));
+            String path = Paths.get("src", "main", "java", "com", "epam", "lab", "task3", "webPages.xsd").toAbsolutePath().toString();
+            //Schema schema = factory.newSchema(new File(path));
+            Schema schema = factory.newSchema(new File(Constants.SCHEME_PATH));
             Validator validator = schema.newValidator();
             validator.setErrorHandler(this);
             validator.validate(new StreamSource(fileName));

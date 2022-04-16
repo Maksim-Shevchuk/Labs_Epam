@@ -30,6 +30,8 @@ public class WebPageXmlReader {
                         if ("webPage".equals(tagName)) {
                             webPage = new WebPage();
                             webPage.setIdentity(reader.getAttributeValue(null, "id"));
+                        } else if ("title".equals(tagName)) {
+                            webPage.setTitle(reader.getElementText());
                         } else if ("webPageType".equals(tagName)) {
                             webPage.setWebPageType(WebPageType.valueOf(reader.getElementText()));
                         } else if ("needAuthorization".equals(tagName)) {
@@ -73,6 +75,12 @@ public class WebPageXmlReader {
                         if ("webPage".equals(tagName)) {
                             webPages.add(webPage);
                         }
+                        break;
+                    }
+                    case XMLStreamConstants.CHARACTERS: {
+                        break;
+                    }
+                    case XMLStreamConstants.END_DOCUMENT: {
                         break;
                     }
                     default:
