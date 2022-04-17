@@ -1,6 +1,5 @@
 package com.epam.lab.task2.utils;
 import com.epam.lab.task2.Word;
-import com.epam.lab.task2.utils.NumberOfOccurrencesComparator;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
